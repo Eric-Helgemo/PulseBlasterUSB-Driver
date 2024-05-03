@@ -1,9 +1,9 @@
 # PulseBlasterUSB-Driver
-This is a python wrapper around the SpinApi wrapper used to make working with the PulseBlasterUSB system easier. It optimizes and groups pulse sequences and allows the user to work in a higher level then the sometimes confusing form of the provided wrapper: https://www.spincore.com/support/SpinAPI_Python_Wrapper/Python_Wrapper_Main.shtml.
-This was written entirely by me with no affiliation to the Spincore Technologies company.
+This is a python wrapper around the SpinApi wrapper used to make working with the PulseBlasterUSB system easier. It optimizes and groups pulse sequences and allows the user to work in a higher level then the sometimes confusing form of the provided wrapper. This was written entirely by me with no affiliation to the Spincore Technologies company.
 
 # Files included
-There are only 3 files in this repository. The 1st is a copy of Spincore's provided python wrapper, spinapi.py, which is provided on their website. The 2nd file, PulseBlasterUSB.py, is the custom wrapper around spinapi.py for easier control. This is designed to have a few different ways of controlling the device. To get started with using this, I've included the 3rd document. This document, Driver Instruction.ipynb, is a jupyter-notebook document (should work on jupyter-lab as well) which goes through all functionalities along with examples of them in use. It would be useful to hook the system up to an oscilliscope to visually see the pulses output by the device.
+There are only 3 files in this repository. The 1st is a copy of Spincore's provided python wrapper, spinapi.py, which is provided on their website: https://www.spincore.com/support/SpinAPI_Python_Wrapper/Python_Wrapper_Main.shtml
+The 2nd file, PulseBlasterUSB.py, is the custom wrapper around spinapi.py for easier control. This is designed to have a few different ways of controlling the device. To get started with using this, I've included the 3rd document. This document, Driver Instruction.ipynb, is a jupyter-notebook document (should work on jupyter-lab as well) which goes through all functionalities along with examples of them in use. It would be useful to hook the system up to an oscilliscope to visually see the pulses output by the device.
 
 # Needs to Run Program
 - You will need to have matplotlib imported on your device, as there is a pulse sequence plotting function.

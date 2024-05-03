@@ -1,7 +1,7 @@
 # PulseBlasterUSB-Driver
 This is a python wrapper around the SpinApi wrapper used to make working with the PulseBlasterUSB system easier. It optimizes and groups pulse sequences and allows the user to work in a higher level then the sometimes confusing form of the provided wrapper. This was written entirely by me with no affiliation to the Spincore Technologies company.
 
-# Files included
+# Files Included
 There are only 3 files in this repository. 
 - The 1st is a copy of Spincore's provided python wrapper, spinapi.py, which is provided on their website: https://www.spincore.com/support/SpinAPI_Python_Wrapper/Python_Wrapper_Main.shtml
 - The 2nd file, PulseBlasterUSB.py, is the custom wrapper around spinapi.py for easier control. This is designed to have a few different ways of controlling the device.

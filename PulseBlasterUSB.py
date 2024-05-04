@@ -28,7 +28,6 @@
 
 from spinapi import *
 import copy
-%matplotlib inline
 import matplotlib.pyplot as plt
 
 class PulseBlasterUSB():
@@ -45,7 +44,7 @@ class PulseBlasterUSB():
     
     #Simply accesses the spinapi python wrapper to communicate with the file "spinapi.h" which tells how to navigtate the
     #ctype control protocals in spincore's usual API for their controllers. Usually board 0 is sufficient.
-    def Initialize(self, board_num):
+    def Initialize(self, board_num, clock):
         pb_set_debug(board_num)
         pb_select_board(board_num)
         #Note for future reader: if the spinapi.py works but the library fails to initialize, make sure that the spinapi.h file

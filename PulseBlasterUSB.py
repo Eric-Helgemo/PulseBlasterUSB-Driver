@@ -338,7 +338,22 @@ class PulseBlasterUSB():
             return index
         else:
             return len(self.temp_sequence_set) + index
-    
+
+    #Adds a sequence to the temp_sequence_set variable and returns the index that it is stored in.
+    #Note: if an index is provided, it will insert the sequence at that index. If it isn't, then it will be tacked to the end.
+    def Buffer_Add(self, sequence, index = 0.5):
+        #Default adds the sequence to the end if not specified.
+        if index == 0.5:
+            self.sequence_set.append(sequence)
+        else:
+            self.sequence_set.insert(index, sequence)
+        if index == 0.5:
+            return len(self.sequence_set) - 1
+        elif index >= 0:
+            return index
+        else:
+            return len(self.sequence_set) + index
+        
     #Removes the sequence at the provided index from temp_sequence_set
     def Temp_Delete(self, index):
         del self.temp_sequence_set[index]

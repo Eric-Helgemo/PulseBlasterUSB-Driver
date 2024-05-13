@@ -114,9 +114,9 @@ class PulseBlasterUSB():
         #eg d_list = [[10, 10], [2, 4, 6, 8]] and p_list = [[0, 0], [0, 1, 1, 0]]
         #becomes d_list = [[20], [2, 10, 8]] and p_list = [[0],[0, 1, 0]]
         if need_segmenting:
-            sum_delays = round(sum(d_list[0]), 12)
+            sum_delays = round(sum(d_list[0]), 9)
             for i in list(range(len(d_list))):
-                if sum_delays != round(sum(d_list[i]), 12):
+                if sum_delays != round(sum(d_list[i]), 9):
                     print(f"Mismatch of pulse timing found at channel {chan_list[i]}. Make sure all channels have the same length of pulse sequence.")
                     raise ErrorValue()
                 #Gets last index for easier parsing
@@ -160,7 +160,7 @@ class PulseBlasterUSB():
                 print("error: pulse too short.")
                 raise ErrorValue()
             else:
-                inst_list[3] += [round((next_end), 12)] #avoids floating point errors
+                inst_list[3] += [round((next_end), 9)] #avoids floating point errors
             #Adds the instructions and arguments. Arguments always 0.
             inst_list[2] += [0]
             #Note this structure gives branching(6) for the last case always and continue(1) for the rest.
